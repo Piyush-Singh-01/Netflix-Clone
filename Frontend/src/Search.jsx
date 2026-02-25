@@ -73,5 +73,3 @@ function Search() {
 }
 export default Search
 
-
-rch;
