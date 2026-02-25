@@ -13,7 +13,7 @@ function Header() {
 
   const logoutHandler = async () => {
     try {
-      await axios.post("http://localhost:8000/api/auth/logout", {}, {
+      await axios.post("https://netflix-clone-backend-r3mc.onrender.com/api/auth/logout", {}, {
         withCredentials: true,
       });
       dispatch(setUserData(null));
