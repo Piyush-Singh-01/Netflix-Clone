@@ -95,22 +95,4 @@ const logOut = async(req, res)=>{
     }
 }
 
-// const user = async(req, res)=>{
-//     try {
-//         const userId = req.userId;
-//         if(!userId){
-//             return res.status(400).json({msg: "userId is not found"});
-//         }
-
-//         const userData = await User.findById(userId);
-//         if(!userData){
-//             return res.status(400).json({msg: "user not found"});
-//         }
-//         // console.log(userData);
-//         return res.status(200).json(userData);
-//     } catch (error) {
-//         console.log(`error from the user route ${error}`);
-//     }
-// }
-
 module.exports = {register, login, logOut};
