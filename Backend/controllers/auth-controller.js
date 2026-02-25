@@ -22,8 +22,8 @@ const register = async(req, res)=>{
 
     const token = await genToken(userCreated._id);
     res.cookie("token", token,{
-        secure: false,
-        sameSite: "lax", // secure is false that's why we use strict 
+        secure: true,
+        sameSite: "None", // secure is false that's why we use strict 
         maxAge: 7*24*60*60*1000,
         httpOnly: true
     })
@@ -61,8 +61,8 @@ const login = async(req, res)=>{
     if(isMatch){
         const token = await genToken(userExist._id);
         res.cookie("token", token,{
-            secure: false,
-            sameSite: "lax",
+            secure: true,
+            sameSite: "None",
             maxAge: 7*24*60*60*1000,
             httpOnly: true 
         })
