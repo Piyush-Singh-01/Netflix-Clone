@@ -33,7 +33,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/auth/register",
+        "https://netflix-clone-backend-r3mc.onrender.com/api/auth/register",
         info,
         { withCredentials: true }
       );
