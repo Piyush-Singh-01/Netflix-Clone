@@ -25,7 +25,8 @@ const register = async(req, res)=>{
         secure: true,
         sameSite: "None", // secure is false that's why we use strict 
         maxAge: 7*24*60*60*1000,
-        httpOnly: true
+        httpOnly: true,
+        path: "/",
     })
 
     return res.status(201).json({
@@ -64,7 +65,8 @@ const login = async(req, res)=>{
             secure: true,
             sameSite: "None",
             maxAge: 7*24*60*60*1000,
-            httpOnly: true 
+            httpOnly: true,
+            path: "/",
         })
         return res.status(201).json({
             message: "login successful",     
