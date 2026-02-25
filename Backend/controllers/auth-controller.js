@@ -25,8 +25,7 @@ const register = async(req, res)=>{
         secure: true,
         sameSite: "None", // secure is false that's why we use strict 
         maxAge: 7*24*60*60*1000,
-        httpOnly: true,
-        path: "/",
+        httpOnly: true
     })
 
     return res.status(201).json({
@@ -65,8 +64,7 @@ const login = async(req, res)=>{
             secure: true,
             sameSite: "None",
             maxAge: 7*24*60*60*1000,
-            httpOnly: true,
-            path: "/",
+            httpOnly: true
         })
         return res.status(201).json({
             message: "login successful",     
@@ -90,12 +88,7 @@ const login = async(req, res)=>{
 
 const logOut = async(req, res)=>{
     try {
-        res.clearCookie("token", {
-           httpOnly: true,
-           secure: true,
-           sameSite: "None",
-           path: "/",
-         });
+        res.clearCookie("token");
         return res.status(200).json({msg: "Logout Successful"})
     } catch (error) {
         return res.status(500).json("Logout error");
