@@ -17,8 +17,10 @@ function useGetCurrentUser() {
       } catch (error) {
         if (error.response?.status !== 401) {
           console.log("Error Fetching user:", error);
-        }
+        }     
         // ⭐ mark auth check completed even if not logged in
+        dispatch(setAuthChecked(null));
+      }finally{
         dispatch(setAuthChecked());
       }
     };
