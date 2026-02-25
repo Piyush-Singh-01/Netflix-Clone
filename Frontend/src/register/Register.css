@@ -1,0 +1,50 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body,#root{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    background-color: rgb(16, 15, 15);
+}
+
+.hero-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-home .box{
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid red;
+}
+
+ input{
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    width: 100%;
+    border: none;
+    outline: none;
+   
+}
+
+.sign-btn{
+    background-color: green;
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.8rem;
+    width: 100%;
+    cursor: pointer;
+} */
