@@ -34,7 +34,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/auth/login",
+        "https://netflix-clone-backend-r3mc.onrender.com/api/auth/login",
         info,
         { withCredentials: true }
       );
