@@ -8,9 +8,9 @@ const getCurrentUser = async(req, res)=>{
             return res.status(400).json({msg: "userId is not found"});
         }
 
-        const userData = await User.findById(userId);
+        const userData = await User.findById(userId).select("-password");
         if(!userData){
-            return res.status(400).json({msg: "user not found"});
+            return res.status(404).json({msg: "user not found"});
         }
         // console.log(userData);
         return res.status(200).json(userData);
