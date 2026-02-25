@@ -10,7 +10,7 @@ function useGetCurrentUser() {
     const fetchUser = async () => {
       try {
         const result = await axios.get(
-          "http://localhost:8000/api/user/current",
+          "https://netflix-clone-backend-r3mc.onrender.com/api/user/current",
           { withCredentials: true }
         );
         dispatch(setUserData(result.data));
